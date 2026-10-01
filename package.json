@@ -8,7 +8,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "docker build": "docker build -t cicd .",
+    "docker run": "docker run -p 3000:3000 --init --rm cicd"
   },
   "keywords": [],
   "author": "",
