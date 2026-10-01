@@ -6,4 +6,3 @@ app.get('/', (req, res) => {
 });
 
 module.exports = app;
-console.log('App is running');
