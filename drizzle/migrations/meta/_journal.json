@@ -36,6 +36,13 @@
       "when": 1790966900840,
       "tag": "0004_gray_king_bedlam",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790968177619,
+      "tag": "0005_chemical_tinkerer",
+      "breakpoints": true
     }
   ]
 }
