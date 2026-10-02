@@ -15,12 +15,21 @@ app.get('/', async (req, res) => {
   res.sendFile(join(publicDir, 'index.html'));
 });
 
-app.get('/health', (req, res) => {
-  res.status(503).json({
-    status: 'error',
-    message:
-      'The garden gnomes have invaded our systems and have broken everything!',
-  });
+app.get('/health', async (req, res) => {
+  try {
+    await getDb().execute(sql`select 1`);
+
+    res.status(200).json({
+      status: 'ok',
+    });
+  } catch (err) {
+    console.error('Health check failed:', err);
+
+    res.status(503).json({
+      status: 'error',
+      message: 'Database unavailable',
+    });
+  }
 });
 
 app.post('/api/subscribers', async (req, res) => {
