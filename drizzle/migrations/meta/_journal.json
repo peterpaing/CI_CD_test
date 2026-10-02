@@ -15,6 +15,13 @@
       "when": 1790962053799,
       "tag": "0001_adorable_ronan",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790962797553,
+      "tag": "0002_backfill_email_address",
+      "breakpoints": true
     }
   ]
 }
